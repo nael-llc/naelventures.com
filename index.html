@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nael Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">Nael Media</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#ventures">Ventures</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="themeToggle"
+          aria-label="Toggle dark mode"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
+            width="1400"
+            height="933"
+            alt="Bright modern office interior with large windows"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Nael Media</p>
+          <h1 id="hero-title" class="hero__title">A portfolio of businesses we own and operate</h1>
+          <p class="hero__lede">
+            From franchise retail and food production to digital media and travel—filter by focus to explore each line of business.
+          </p>
+        </div>
+      </section>
+
+      <section class="ventures" id="ventures" aria-labelledby="ventures-title">
+        <div class="ventures__head">
+          <h2 id="ventures-title" class="ventures__title">Ventures</h2>
+          <p class="ventures__count">
+            <span id="resultCount">4</span> results
+          </p>
+        </div>
+
+        <div class="layout">
+          <aside class="filters" aria-labelledby="filters-heading">
+            <div class="filters__header">
+              <h3 id="filters-heading" class="filters__heading">Filters</h3>
+              <span class="filters__badge" id="activeFilterCount">0</span>
+            </div>
+
+            <div class="filter-group" data-filter-group="focus">
+              <p class="filter-group__label">Focus</p>
+              <div class="filter-group__options" role="group" aria-label="Focus">
+                <button type="button" class="filter-pill" data-value="franchise">Franchise</button>
+                <button type="button" class="filter-pill" data-value="digital">Digital media</button>
+                <button type="button" class="filter-pill" data-value="food">Food &amp; agriculture</button>
+                <button type="button" class="filter-pill" data-value="travel">Travel</button>
+              </div>
+            </div>
+
+            <div class="filter-group" data-filter-group="model">
+              <p class="filter-group__label">Model</p>
+              <div class="filter-group__options" role="group" aria-label="Model">
+                <button type="button" class="filter-pill" data-value="own-operate">Own &amp; operate</button>
+                <button type="button" class="filter-pill" data-value="agency">Agency / services</button>
+              </div>
+            </div>
+
+            <button type="button" class="filters__reset" id="resetFilters">Reset</button>
+          </aside>
+
+          <div class="grid-wrap">
+            <p class="grid-empty" id="noResults" hidden>No results. Try clearing filters.</p>
+            <ul class="card-grid" id="cardGrid">
+              <li
+                class="card"
+                data-focus="franchise food"
+                data-model="own-operate"
+              >
+                <article>
+                  <div class="card__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80"
+                      width="800"
+                      height="500"
+                      alt="Fresh cookies on a plate"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="card__title">Crumbl franchises</h3>
+                  <p class="card__desc">
+                    We own and operate Crumbl Cookie franchise locations—retail baking, local teams, and the rotating weekly menu our communities love.
+                  </p>
+                  <ul class="card__tags">
+                    <li>Franchise</li>
+                    <li>Food &amp; retail</li>
+                  </ul>
+                </article>
+              </li>
+              <li
+                class="card"
+                data-focus="digital food"
+                data-model="own-operate"
+              >
+                <article>
+                  <div class="card__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80"
+                      width="800"
+                      height="533"
+                      alt="Golden retriever dog outdoors"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="card__title">Social media &amp; maple syrup</h3>
+                  <p class="card__desc">
+                    We own and operate social media accounts—including a TikTok built around our beloved golden retriever, Maple.
+                  </p>
+                  <a
+                    class="card__link"
+                    href="https://www.tiktok.com/@maplesyrup2022"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @maplesyrup2022 on TikTok
+                  </a>
+                  <ul class="card__tags">
+                    <li>Digital media</li>
+                    <li>Consumer</li>
+                  </ul>
+                </article>
+              </li>
+              <li
+                class="card"
+                data-focus="food"
+                data-model="own-operate"
+              >
+                <article>
+                  <div class="card__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80"
+                      width="800"
+                      height="533"
+                      alt="Free-range chickens on a farm"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="card__title">Chicken business</h3>
+                  <p class="card__desc">
+                    We own and operate our chicken business, we offer fresh eggs to our community.
+                  </p>
+                  <ul class="card__tags">
+                    <li>Food &amp; agriculture</li>
+                    <li>Operations</li>
+                  </ul>
+                </article>
+              </li>
+              <li
+                class="card"
+                data-focus="travel"
+                data-model="agency"
+              >
+                <article>
+                  <div class="card__media">
+                    <img
+                      src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
+                      width="800"
+                      height="533"
+                      alt="View from an airplane window above the clouds"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3 class="card__title">Travel agency</h3>
+                  <p class="card__desc">
+                    A full-service travel agency: we document our travels and share our experiences with our community. Reach out for other services.
+                  </p>
+                  <ul class="card__tags">
+                    <li>Travel</li>
+                    <li>Services</li>
+                  </ul>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact__media">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+            width="1200"
+            height="800"
+            alt="Team collaborating at a laptop"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="contact__inner">
+          <h2 id="contact-title" class="contact__title">Get in touch</h2>
+          <p class="contact__text">
+            Interested in working together? Reach out and we’ll respond shortly.
+          </p>
+          <a class="contact__link" href="mailto:Naelmediallc@gmail.com">Naelmediallc@gmail.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Nael Media</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

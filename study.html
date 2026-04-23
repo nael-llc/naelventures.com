@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Study the scriptures, personalized devotionals, and daily verse — a simple web companion."
+    />
+    <title>Covenant Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/study.css" />
+  </head>
+  <body class="study-body">
+    <a class="skip-link" href="#study-main">Skip to content</a>
+
+    <div
+      class="study-drawer-backdrop"
+      id="drawerBackdrop"
+      aria-hidden="true"
+    ></div>
+
+    <aside
+      class="study-drawer"
+      id="studyDrawer"
+      aria-label="Navigation menu"
+      aria-hidden="true"
+    >
+      <div class="study-drawer__header">
+        <p class="study-drawer__title">Menu</p>
+      </div>
+      <nav class="study-drawer__nav" aria-label="Template links">
+        <button type="button" class="study-drawer__link" data-menu-item>
+          Bookmarks
+        </button>
+        <button type="button" class="study-drawer__link" data-menu-item>
+          Reading plan
+        </button>
+        <button type="button" class="study-drawer__link" data-menu-item>
+          Hymns
+        </button>
+        <button type="button" class="study-drawer__link" data-menu-item>
+          Temple &amp; family
+        </button>
+        <button type="button" class="study-drawer__link" data-menu-item>
+          Settings
+        </button>
+      </nav>
+      <p class="study-drawer__note">Template buttons — connect pages later.</p>
+    </aside>
+
+    <header class="study-topbar">
+      <button
+        type="button"
+        class="study-menu-btn"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-controls="studyDrawer"
+        aria-label="Open menu"
+      >
+        <span class="study-menu-btn__icon" aria-hidden="true">›</span>
+      </button>
+      <h1 class="study-topbar__title" id="topbarTitle">Covenant Study</h1>
+      <button
+        type="button"
+        class="theme-toggle study-theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle dark mode"
+      >
+        <span class="theme-toggle__icon" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <main id="study-main" class="study-main">
+      <!-- Home -->
+      <div class="study-view" id="view-home" data-view="home">
+        <section class="study-hero" aria-labelledby="study-hero-title">
+          <p class="study-eyebrow">Welcome</p>
+          <h2 id="study-hero-title" class="study-hero__title">
+            Study, pray, and draw near to the Savior
+          </h2>
+          <p class="study-hero__lede">
+            Scripture chat (demo replies), a slider-based devotional with a
+            closing prayer, today’s verse, and a news placeholder — all in your
+            browser. Works on your iPhone in Safari too.
+          </p>
+        </section>
+
+        <section class="study-card study-daily" aria-labelledby="daily-title">
+          <div class="study-daily__head">
+            <h2 id="daily-title" class="study-section-title">Daily verse</h2>
+            <button type="button" class="study-btn study-btn--ghost" id="refreshVerse">
+              Refresh
+            </button>
+          </div>
+          <p class="study-daily__ref" id="dailyRef"></p>
+          <p class="study-daily__text" id="dailyText"></p>
+          <div class="study-callout">
+            <strong>Home screen on iPhone</strong>
+            <p>
+              In Safari, tap <span class="study-kbd">Share</span> →
+              <span class="study-kbd">Add to Home Screen</span> for a quick
+              shortcut. A true iOS home-screen <em>widget</em> still requires a
+              native app from the App Store.
+            </p>
+          </div>
+        </section>
+
+        <section class="study-actions" aria-label="Quick actions">
+          <button type="button" class="study-action" data-go="chat">
+            <span class="study-action__icon" aria-hidden="true">💬</span>
+            <span class="study-action__text">
+              <span class="study-action__title">Talk about the scriptures</span>
+              <span class="study-action__sub">Chat-style study (demo replies for now)</span>
+            </span>
+            <span class="study-action__chev" aria-hidden="true">›</span>
+          </button>
+          <button type="button" class="study-action" data-go="devotional">
+            <span class="study-action__icon" aria-hidden="true">📖</span>
+            <span class="study-action__text">
+              <span class="study-action__title">Personalized devotional</span>
+              <span class="study-action__sub">Sliders, then a prayer at the end</span>
+            </span>
+            <span class="study-action__chev" aria-hidden="true">›</span>
+          </button>
+        </section>
+
+        <section class="study-card study-news" aria-labelledby="news-title">
+          <h2 id="news-title" class="study-section-title">News &amp; recent events</h2>
+          <p class="study-muted study-news__hint">
+            Placeholder — plug in Church news RSS or API later.
+          </p>
+          <ul class="study-news__list" id="newsList"></ul>
+        </section>
+
+        <p class="study-footer-note">
+          <a href="index.html">← Back to Nael Media</a>
+        </p>
+      </div>
+
+      <!-- Scripture chat -->
+      <div class="study-view study-view--hidden" id="view-chat" data-view="chat" hidden>
+        <div class="study-chat" id="chatThread" aria-live="polite"></div>
+        <form class="study-chat-form" id="chatForm" autocomplete="off">
+          <label class="visually-hidden" for="chatInput">Message</label>
+          <textarea
+            id="chatInput"
+            class="study-chat-input"
+            rows="2"
+            placeholder="Ask about the scriptures…"
+            required
+          ></textarea>
+          <button type="submit" class="study-btn study-btn--primary">Send</button>
+        </form>
+      </div>
+
+      <!-- Devotional -->
+      <div
+        class="study-view study-view--hidden"
+        id="view-devotional"
+        data-view="devotional"
+        hidden
+      >
+        <p class="study-muted study-devotional-intro">
+          Adjust the sliders, then generate a short devotional. Later you can
+          send these values to an AI service.
+        </p>
+
+        <div class="study-slider-block">
+          <label class="study-slider-label" for="sliderGod"
+            >Relationship with God right now</label
+          >
+          <input
+            type="range"
+            id="sliderGod"
+            class="study-range"
+            min="0"
+            max="100"
+            value="50"
+            aria-valuetext="mid"
+          />
+          <div class="study-slider-ends">
+            <span>Distant / unsure</span>
+            <span>Close / trusting</span>
+          </div>
+          <p class="study-slider-foot" id="labelGod"></p>
+        </div>
+
+        <div class="study-slider-block">
+          <label class="study-slider-label" for="sliderDay">How your day has been</label>
+          <input
+            type="range"
+            id="sliderDay"
+            class="study-range"
+            min="0"
+            max="100"
+            value="50"
+          />
+          <div class="study-slider-ends">
+            <span>Difficult</span>
+            <span>Wonderful</span>
+          </div>
+          <p class="study-slider-foot" id="labelDay"></p>
+        </div>
+
+        <button type="button" class="study-btn study-btn--primary study-btn--block" id="btnDevotional">
+          Personalize my devotional
+        </button>
+
+        <div class="study-output study-output--hidden" id="devotionalOut" hidden>
+          <h3 class="study-output__title">Today’s devotional</h3>
+          <div class="study-output__body" id="devotionalBody"></div>
+        </div>
+
+        <div class="study-output study-prayer study-output--hidden" id="prayerOut" hidden>
+          <h3 class="study-output__title">A prayer for right now</h3>
+          <p class="study-prayer__text" id="prayerText"></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/study.js"></script>
+  </body>
+</html>
