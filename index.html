@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -17,10 +17,20 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="site-header__inner">
-        <a class="logo" href="index.html">Nael Media</a>
-        <nav class="nav" aria-label="Primary">
-          <a href="#ventures">Ventures</a>
-          <a href="#contact">Contact</a>
+        <a class="logo" href="#home">Nael Media</a>
+        <nav class="nav nav--primary" aria-label="Primary">
+          <a
+            class="nav__tab"
+            href="#home"
+            data-view="home"
+            aria-current="page"
+            id="navHome"
+            >Home</a
+          >
+          <a class="nav__tab" href="#businesses" data-view="businesses" id="navBusinesses"
+            >Our businesses</a
+          >
+          <a class="nav__tab nav__tab--ghost" href="#contact">Contact</a>
         </nav>
         <button
           type="button"
@@ -34,64 +44,130 @@
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__media">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
-            width="1400"
-            height="933"
-            alt="Bright modern office interior with large windows"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </div>
-        <div class="hero__content">
-          <p class="hero__eyebrow">Nael Media</p>
-          <h1 id="hero-title" class="hero__title">A portfolio of businesses we own and operate</h1>
-          <p class="hero__lede">
-            From franchise retail and food production to digital media and travel—filter by focus to explore each line of business.
-          </p>
-        </div>
-      </section>
+      <div
+        id="view-home"
+        class="page-view page-view--home"
+        data-view-panel="home"
+        role="region"
+        aria-label="Home"
+      >
+        <section class="home-hero" aria-labelledby="home-hero-title">
+          <div class="home-hero__inner">
+            <p class="home-hero__eyebrow">Nael Media</p>
+            <h1 id="home-hero-title" class="home-hero__title">
+              A portfolio of businesses we own and operate
+            </h1>
+            <p class="home-hero__lede">
+              From franchise retail and food production to digital media and travel—we
+              build and run consumer-facing brands and operations with a hands-on approach.
+            </p>
+            <a class="home-hero__cta" href="#businesses" data-view="businesses"
+              >Explore our businesses</a
+            >
+          </div>
+        </section>
 
-      <section class="ventures" id="ventures" aria-labelledby="ventures-title">
-        <div class="ventures__head">
-          <h2 id="ventures-title" class="ventures__title">Ventures</h2>
-          <p class="ventures__count">
-            <span id="resultCount">4</span> results
-          </p>
-        </div>
+        <section class="home-band" aria-labelledby="home-band-title">
+          <div class="home-band__inner">
+            <h2 id="home-band-title" class="home-band__title">How we work</h2>
+            <p class="home-band__text">
+              We focus on lines of business we can operate directly: franchise locations,
+              agriculture and food, digital audiences, and travel services. Our flexible
+              approach lets each venture grow with its own team and rhythm, while staying
+              part of one portfolio.
+            </p>
+          </div>
+        </section>
 
-        <div class="layout">
-          <aside class="filters" aria-labelledby="filters-heading">
-            <div class="filters__header">
-              <h3 id="filters-heading" class="filters__heading">Filters</h3>
-              <span class="filters__badge" id="activeFilterCount">0</span>
-            </div>
+        <section class="home-split" aria-labelledby="home-split-title">
+          <div class="home-split__media">
+            <img
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
+              width="1400"
+              height="933"
+              alt="Bright modern office interior with large windows"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="home-split__content">
+            <h2 id="home-split-title" class="home-split__heading">What you’ll find here</h2>
+            <p class="home-split__text">
+              Use the <strong>Our businesses</strong> section to browse every line of
+              business—filter by category or operating model the same way you would on a
+              partner portfolio. Each card reflects how we participate today: own and
+              operate, or agency-style services where noted.
+            </p>
+          </div>
+        </section>
+      </div>
 
-            <div class="filter-group" data-filter-group="focus">
-              <p class="filter-group__label">Focus</p>
-              <div class="filter-group__options" role="group" aria-label="Focus">
-                <button type="button" class="filter-pill" data-value="franchise">Franchise</button>
-                <button type="button" class="filter-pill" data-value="digital">Digital media</button>
-                <button type="button" class="filter-pill" data-value="food">Food &amp; agriculture</button>
-                <button type="button" class="filter-pill" data-value="travel">Travel</button>
+      <div
+        id="view-businesses"
+        class="page-view page-view--businesses"
+        data-view-panel="businesses"
+        role="region"
+        aria-label="Our businesses"
+        hidden
+      >
+        <header class="portfolio-header">
+          <div class="portfolio-header__inner">
+            <p class="portfolio-header__eyebrow">Our businesses</p>
+            <h1 class="portfolio-header__title">Lines we own and operate</h1>
+            <p class="portfolio-header__intro">
+              Nael Media invests its time and capital in brands and operations we believe
+              in—franchise retail, digital media, food and agriculture, and travel. Filter
+              by category or model to explore each business.
+            </p>
+          </div>
+        </header>
+
+        <section class="ventures" id="ventures" aria-labelledby="ventures-title">
+          <div class="ventures__toolbar">
+            <div class="ventures__toolbar-row">
+              <span class="ventures__toolbar-label">Filtering by</span>
+              <div class="ventures__toolbar-pills" role="group" aria-label="Category">
+                <button type="button" class="filter-pill filter-pill--category is-active" data-category-filter="all">
+                  All
+                </button>
+                <button type="button" class="filter-pill filter-pill--category" data-category-filter="franchise">
+                  Franchise &amp; retail
+                </button>
+                <button type="button" class="filter-pill filter-pill--category" data-category-filter="digital">
+                  Digital media
+                </button>
+                <button type="button" class="filter-pill filter-pill--category" data-category-filter="food">
+                  Food &amp; agriculture
+                </button>
+                <button type="button" class="filter-pill filter-pill--category" data-category-filter="travel">
+                  Travel
+                </button>
               </div>
             </div>
-
-            <div class="filter-group" data-filter-group="model">
-              <p class="filter-group__label">Model</p>
-              <div class="filter-group__options" role="group" aria-label="Model">
-                <button type="button" class="filter-pill" data-value="own-operate">Own &amp; operate</button>
-                <button type="button" class="filter-pill" data-value="agency">Agency / services</button>
+            <div class="ventures__toolbar-row">
+              <span class="ventures__toolbar-label">View by</span>
+              <div class="ventures__toolbar-pills" role="group" aria-label="Operating model">
+                <button type="button" class="filter-pill filter-pill--model is-active" data-model-filter="all">
+                  All
+                </button>
+                <button type="button" class="filter-pill filter-pill--model" data-model-filter="own-operate">
+                  Own &amp; operate
+                </button>
+                <button type="button" class="filter-pill filter-pill--model" data-model-filter="agency">
+                  Agency / services
+                </button>
               </div>
             </div>
+            <p class="ventures__meta">
+              <span id="resultCount">4</span> businesses
+              <button type="button" class="ventures__reset" id="resetFilters">Clear filters</button>
+            </p>
+          </div>
 
-            <button type="button" class="filters__reset" id="resetFilters">Reset</button>
-          </aside>
+          <h2 id="ventures-title" class="visually-hidden">Business list</h2>
 
           <div class="grid-wrap">
-            <p class="grid-empty" id="noResults" hidden>No results. Try clearing filters.</p>
+            <p class="grid-empty" id="noResults" hidden>No businesses match. Try clearing filters.</p>
             <ul class="card-grid" id="cardGrid">
               <li
                 class="card"
@@ -207,8 +283,8 @@
               </li>
             </ul>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="contact" id="contact" aria-labelledby="contact-title">
         <div class="contact__media">
@@ -222,17 +298,24 @@
           />
         </div>
         <div class="contact__inner">
-          <h2 id="contact-title" class="contact__title">Get in touch</h2>
+          <h2 id="contact-title" class="contact__title">Contact</h2>
           <p class="contact__text">
             Interested in working together? Reach out and we’ll respond shortly.
           </p>
-          <a class="contact__link" href="mailto:Naelmediallc@gmail.com">Naelmediallc@gmail.com</a>
+          <a class="contact__link" href="mailto:naelmediallc@gmail.com">naelmediallc@gmail.com</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© <span id="year"></span> Nael Media</p>
+      <div class="site-footer__inner">
+        <p class="site-footer__brand">Nael Media</p>
+        <p class="site-footer__note">
+          Information on this site describes our operating businesses for general
+          purposes only; it is not an offer or solicitation.
+        </p>
+        <p class="site-footer__copy">© <span id="year"></span> Nael Media</p>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
