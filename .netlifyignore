@@ -1,0 +1,13 @@
+# Keeps a future Netlify publish of the repository root from serving
+# Cloudflare tooling. Existing site files stay publishable.
+node_modules
+dist
+.wrangler
+.git
+docs
+scripts
+package.json
+package-lock.json
+wrangler.jsonc
+.netlifyignore
+.gitignore
