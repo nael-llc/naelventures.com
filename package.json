@@ -1,0 +1,14 @@
+{
+  "name": "naelventures",
+  "private": true,
+  "description": "Static Nael Ventures site prepared for Cloudflare Workers Static Assets. No Worker script.",
+  "scripts": {
+    "build": "node scripts/export-static.mjs",
+    "manifest": "node scripts/asset-manifest.mjs",
+    "dev": "wrangler dev --latest false",
+    "check": "npm run build && wrangler deploy --dry-run --autoconfig false"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}
