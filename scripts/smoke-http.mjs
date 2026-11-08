@@ -4,7 +4,7 @@ if (!base) {
   process.exit(1);
 }
 
-const homeMarker = "A portfolio of businesses we own and operate";
+const homeMarker = "We own and operate a focused portfolio of consumer businesses";
 const studyMarker = "Covenant Study";
 
 const checks = [
@@ -13,9 +13,10 @@ const checks = [
   { path: "/study", expect: 200, type: "text/html", body: studyMarker },
   { path: "/study/", expect: 307, location: "/study" },
   { path: "/study.html", expect: 307, location: "/study" },
+  { path: "/css/home.css", expect: 200, type: "text/css", body: "--navy:" },
   { path: "/css/style.css", expect: 200, type: "text/css", body: "--bg:" },
   { path: "/css/study.css", expect: 200, type: "text/css", body: ".study-body" },
-  { path: "/js/main.js", expect: 200, type: "javascript", body: "initViews" },
+  { path: "/js/main.js", expect: 200, type: "javascript", body: "overviewYear" },
   { path: "/js/study.js", expect: 200, type: "javascript", body: "verseForToday" },
   { path: "/missing-page", expect: 404, notBody: homeMarker },
   { path: "/STUDY", expect: 404 },

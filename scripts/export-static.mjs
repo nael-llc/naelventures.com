@@ -8,6 +8,7 @@ const outDir = path.join(root, "dist");
 const files = [
   "index.html",
   "study.html",
+  "css/home.css",
   "css/style.css",
   "css/study.css",
   "js/main.js",

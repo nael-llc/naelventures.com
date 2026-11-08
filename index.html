@@ -4,279 +4,255 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nael Ventures</title>
+    <meta
+      name="description"
+      content="Nael Ventures owns and operates a focused portfolio of consumer businesses across franchise retail, food production, digital media and travel."
+    />
+    <meta property="og:title" content="Nael Ventures" />
+    <meta
+      property="og:description"
+      content="We own and operate a focused portfolio of consumer businesses."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b1f3a" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230b1f3a'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='600' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <div class="site-header__inner">
-        <a class="logo" href="#home">Nael Ventures</a>
-        <nav class="nav nav--primary" aria-label="Primary">
-          <a
-            class="nav__tab"
-            href="#home"
-            data-view="home"
-            aria-current="page"
-            id="navHome"
-            >Home</a
-          >
-          <a class="nav__tab" href="#businesses" data-view="businesses" id="navBusinesses"
-            >Our businesses</a
-          >
-          <a class="nav__tab nav__tab--ghost" href="#contact">Contact</a>
+      <div class="container site-header__inner">
+        <a class="brand" href="#top" aria-label="Nael Ventures, back to top">
+          <span class="brand__mark" aria-hidden="true">N</span>
+          <span class="brand__name">Nael Ventures</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="#portfolio">Portfolio</a>
+          <a href="#approach">Approach</a>
+          <a class="button button--primary button--small" href="#contact">Contact us</a>
         </nav>
-        <button
-          type="button"
-          class="theme-toggle"
-          id="themeToggle"
-          aria-label="Toggle dark mode"
-        >
-          <span class="theme-toggle__icon" aria-hidden="true"></span>
-        </button>
       </div>
     </header>
 
     <main id="main">
-      <div
-        id="view-home"
-        class="page-view page-view--home"
-        data-view-panel="home"
-        role="region"
-        aria-label="Home"
-      >
-        <section class="home-hero" aria-labelledby="home-hero-title">
-          <div class="home-hero__inner">
-            <p class="home-hero__eyebrow">Nael Ventures</p>
-            <h1 id="home-hero-title" class="home-hero__title">
-              A portfolio of businesses we own and operate
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="eyebrow">Privately held operating company</p>
+            <h1 id="hero-title" class="hero__title">
+              We own and operate a focused portfolio of consumer businesses.
             </h1>
-            <p class="home-hero__lede">
-              From franchise retail and food production to digital media and travel—we
-              build and run consumer-facing brands and operations with a hands-on approach.
+            <p class="hero__lede">
+              Nael Ventures builds and runs brands across franchise retail, food production,
+              digital media and travel, with a hands-on approach and a long-term view.
             </p>
-            <a class="home-hero__cta" href="#businesses" data-view="businesses"
-              >Explore our businesses</a
-            >
+            <div class="hero__actions">
+              <a class="button button--primary" href="#portfolio">View the portfolio</a>
+              <a class="button button--secondary" href="#contact">Get in touch</a>
+            </div>
           </div>
-        </section>
 
-        <section class="home-band" aria-labelledby="home-band-title">
-          <div class="home-band__inner">
-            <h2 id="home-band-title" class="home-band__title">How we work</h2>
-            <p class="home-band__text">
-              We partner closely with each business we own, building practical systems,
-              supporting local teams, and focusing on long-term execution over short-term
-              trends. Each venture keeps its own identity while benefiting from shared
-              operational experience across the portfolio.
-            </p>
-          </div>
-        </section>
-
-        <section class="home-split" aria-labelledby="home-split-title">
-          <div class="home-split__media">
-            <img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
-              width="1400"
-              height="933"
-              alt="Bright modern office interior with large windows"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="home-split__content">
-            <h2 id="home-split-title" class="home-split__heading">What you’ll find here</h2>
-            <p class="home-split__text">
-              Use the <strong>Our businesses</strong> section to browse our businesses.
-              Each card reflects how we participate today: own and operate, or agency-style
-              services where noted.
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <div
-        id="view-businesses"
-        class="page-view page-view--businesses"
-        data-view-panel="businesses"
-        role="region"
-        aria-label="Our businesses"
-        hidden
-      >
-        <header class="portfolio-header">
-          <div class="portfolio-header__inner">
-            <h1 class="portfolio-header__title">Our businesses</h1>
-            <p class="portfolio-header__intro">
-              Nael Ventures invests its time and capital in brands and operations we believe
-              in—franchise retail, digital media, food and agriculture, and travel.
-            </p>
-          </div>
-        </header>
-
-        <section class="ventures" id="ventures" aria-labelledby="ventures-title">
-          <p class="ventures__meta">4 businesses</p>
-
-          <h2 id="ventures-title" class="visually-hidden">Business list</h2>
-
-          <div class="grid-wrap">
-            <ul class="card-grid" id="cardGrid">
-              <li
-                class="card"
-                data-focus="franchise food"
-                data-model="own-operate"
-              >
-                <article>
-                  <div class="card__media">
-                    <img
-                      src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80"
-                      width="800"
-                      height="500"
-                      alt="Fresh cookies on a plate"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 class="card__title">Crumbl franchises</h3>
-                  <p class="card__desc">
-                    We own and operate Crumbl Cookie franchise locations—retail baking, local teams, and the rotating weekly menu our communities love.
-                  </p>
-                  <ul class="card__tags">
-                    <li>Franchise</li>
-                    <li>Food &amp; retail</li>
-                  </ul>
-                </article>
-              </li>
-              <li
-                class="card"
-                data-focus="digital food"
-                data-model="own-operate"
-              >
-                <article>
-                  <div class="card__media">
-                    <img
-                      src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=800&q=80"
-                      width="800"
-                      height="533"
-                      alt="Golden retriever dog outdoors"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 class="card__title">Social media &amp; maple syrup</h3>
-                  <p class="card__desc">
-                    We own and operate social media accounts—including a TikTok built around our beloved golden retriever, Maple.
-                  </p>
-                  <a
-                    class="card__link"
-                    href="https://www.tiktok.com/@maplesyrup2022"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    @maplesyrup2022 on TikTok
-                  </a>
-                  <ul class="card__tags">
-                    <li>Digital media</li>
-                    <li>Consumer</li>
-                  </ul>
-                </article>
-              </li>
-              <li
-                class="card"
-                data-focus="food"
-                data-model="own-operate"
-              >
-                <article>
-                  <div class="card__media">
-                    <img
-                      src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80"
-                      width="800"
-                      height="533"
-                      alt="Free-range chickens on a farm"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 class="card__title">Chicken business</h3>
-                  <p class="card__desc">
-                    We own and operate our chicken business, we offer fresh eggs to our community.
-                  </p>
-                  <ul class="card__tags">
-                    <li>Food &amp; agriculture</li>
-                    <li>Operations</li>
-                  </ul>
-                </article>
-              </li>
-              <li
-                class="card"
-                data-focus="travel"
-                data-model="agency"
-              >
-                <article>
-                  <div class="card__media">
-                    <img
-                      src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80"
-                      width="800"
-                      height="533"
-                      alt="View from an airplane window above the clouds"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  <h3 class="card__title">Travel agency</h3>
-                  <p class="card__desc">
-                    A full-service travel agency: we document our travels and share our experiences with our community. Reach out for other services.
-                  </p>
-                  <ul class="card__tags">
-                    <li>Travel</li>
-                    <li>Services</li>
-                  </ul>
-                </article>
-              </li>
+          <aside class="overview" aria-labelledby="overview-title">
+            <div class="overview__head">
+              <h2 id="overview-title" class="overview__title">Portfolio overview</h2>
+              <span class="overview__year" id="overviewYear">2026</span>
+            </div>
+            <ul class="overview__list">
+              <li><span>Crumbl franchises</span><span>Franchise retail</span></li>
+              <li><span>Social media properties</span><span>Digital media</span></li>
+              <li><span>Egg production</span><span>Food &amp; agriculture</span></li>
+              <li><span>Travel agency</span><span>Travel services</span></li>
             </ul>
-          </div>
-        </section>
-      </div>
-
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact__media">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-            width="1200"
-            height="800"
-            alt="Team collaborating at a laptop"
-            loading="lazy"
-            decoding="async"
-          />
+          </aside>
         </div>
-        <div class="contact__inner">
-          <h2 id="contact-title" class="contact__title">Contact</h2>
-          <p class="contact__text">
-            Interested in working together? Reach out and we’ll respond shortly.
+
+        <div class="container">
+          <dl class="facts">
+            <div class="facts__item">
+              <dt>Operating businesses</dt>
+              <dd>4</dd>
+            </div>
+            <div class="facts__item">
+              <dt>Sectors we operate in</dt>
+              <dd>Retail · Food · Media · Travel</dd>
+            </div>
+            <div class="facts__item">
+              <dt>Directly managed by our team</dt>
+              <dd>Owner-operated</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="portfolio container" id="portfolio" aria-labelledby="portfolio-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2 id="portfolio-title" class="section-title">Our businesses</h2>
+          </div>
+          <p class="section-head__intro">
+            Each business operates under its own brand. We participate either as
+            owner-operator or as a service provider, as noted.
           </p>
-          <a class="contact__link" href="mailto:naelmediallc@gmail.com">naelmediallc@gmail.com</a>
+        </div>
+
+        <ol class="holdings">
+          <li class="holding">
+            <div class="holding__name">
+              <span class="holding__sector">01 · Franchise retail</span>
+              <h3>Crumbl franchises</h3>
+            </div>
+            <p class="holding__desc">
+              Ownership and operation of Crumbl Cookie franchise locations, including retail
+              baking operations and local team management.
+            </p>
+            <dl class="holding__role">
+              <dt>Role</dt>
+              <dd>Owner-operator</dd>
+            </dl>
+          </li>
+          <li class="holding">
+            <div class="holding__name">
+              <span class="holding__sector">02 · Digital media</span>
+              <h3>Social media properties</h3>
+            </div>
+            <p class="holding__desc">
+              Ownership and operation of consumer social media accounts, including
+              <a
+                href="https://www.tiktok.com/@maplesyrup2022"
+                target="_blank"
+                rel="noopener noreferrer"
+                >@maplesyrup2022</a
+              >
+              on TikTok.
+            </p>
+            <dl class="holding__role">
+              <dt>Role</dt>
+              <dd>Owner-operator</dd>
+            </dl>
+          </li>
+          <li class="holding">
+            <div class="holding__name">
+              <span class="holding__sector">03 · Food &amp; agriculture</span>
+              <h3>Egg production</h3>
+            </div>
+            <p class="holding__desc">
+              A poultry operation supplying fresh eggs to the local community.
+            </p>
+            <dl class="holding__role">
+              <dt>Role</dt>
+              <dd>Owner-operator</dd>
+            </dl>
+          </li>
+          <li class="holding">
+            <div class="holding__name">
+              <span class="holding__sector">04 · Travel</span>
+              <h3>Travel agency</h3>
+            </div>
+            <p class="holding__desc">
+              Full-service travel planning, supported by travel content we produce and publish
+              for our community.
+            </p>
+            <dl class="holding__role">
+              <dt>Role</dt>
+              <dd>Service provider</dd>
+            </dl>
+          </li>
+        </ol>
+      </section>
+
+      <section class="approach" id="approach" aria-labelledby="approach-title">
+        <div class="container">
+          <div class="approach__head">
+            <div>
+              <p class="eyebrow eyebrow--inverse">Approach</p>
+              <h2 id="approach-title" class="section-title section-title--inverse">
+                Independent brands, shared operating discipline.
+              </h2>
+            </div>
+            <p class="approach__intro">
+              Each venture keeps its own identity while benefiting from the operational
+              experience we build across the portfolio.
+            </p>
+          </div>
+          <div class="principles">
+            <div class="principle">
+              <h3>Active ownership</h3>
+              <p>
+                We work closely with every business we own and stay involved in day-to-day
+                operations.
+              </p>
+            </div>
+            <div class="principle">
+              <h3>Practical systems</h3>
+              <p>
+                We put clear processes in place and support the local teams who run each
+                business.
+              </p>
+            </div>
+            <div class="principle">
+              <h3>Long-term orientation</h3>
+              <p>We prioritize durable execution over short-term trends.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact container" id="contact" aria-labelledby="contact-title">
+        <div class="contact__box">
+          <div class="contact__copy">
+            <h2 id="contact-title" class="section-title">Contact</h2>
+            <p>
+              For partnership inquiries or questions about our businesses, please reach out.
+              We respond promptly.
+            </p>
+          </div>
+          <a class="button button--primary button--large" href="mailto:naelmediallc@gmail.com"
+            >naelmediallc@gmail.com</a
+          >
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="site-footer__inner">
-        <p class="site-footer__brand">Nael Ventures</p>
-        <p class="site-footer__note">
-          Information on this site describes our operating businesses for general
-          purposes only; it is not an offer or solicitation.
+      <div class="container site-footer__top">
+        <div class="site-footer__brand">
+          <span class="site-footer__name">Nael Ventures</span>
+          <p>A focused portfolio of owner-operated consumer businesses.</p>
+        </div>
+        <nav class="site-footer__col" aria-label="Footer">
+          <span class="site-footer__label">Company</span>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#approach">Approach</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="site-footer__col">
+          <span class="site-footer__label">Get in touch</span>
+          <a href="mailto:naelmediallc@gmail.com">naelmediallc@gmail.com</a>
+          <a href="https://www.tiktok.com/@maplesyrup2022" target="_blank" rel="noopener noreferrer"
+            >TikTok</a
+          >
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>
+          Information on this site describes our operating businesses for general purposes
+          only; it is not an offer or solicitation.
         </p>
-        <p class="site-footer__copy">© <span id="year"></span> Nael Ventures</p>
+        <p>© <span id="year">2026</span> Nael Ventures</p>
       </div>
     </footer>
 
     <script src="js/main.js"></script>
   </body>
 </html>
-
-
